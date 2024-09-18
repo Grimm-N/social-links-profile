@@ -1,0 +1,162 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 400 700; 
+}
+
+/*    BODY    */
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+    background-color: #FF7D74;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+  }
+
+/*    PROFILE CARD    */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 25rem;
+    width: 90%;
+    padding: 2rem;
+    margin: 1rem;
+
+    background-color: #4D2E27;
+    border: 1px solid #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0px 8px 0 rgb(53, 30, 30);;
+}
+
+.profile *+* {
+    margin-top: 1rem;
+}
+
+.profile__avatar {
+    width: 100%;
+    max-width: 5rem;   
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 4px 0 #1f111a;;
+}
+
+.profile__name {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.profile__address {
+    font-weight: 600;
+    color: #5CE6FF;
+    margin: 0.5rem;
+}
+
+.profile__info {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.profile__links__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.profile__link {
+    padding: 0.8rem 1rem;
+    border-radius: 0.25rem;
+    background-color:#744135;
+    text-decoration: none;
+    color: #fff;
+    transition: background .2s ease, color .2s ease;
+}
+
+.profile__link:hover {
+    color: #4D2E27;
+    background-color: #5CE6FF;
+    font-weight: 700;
+
+}
+
+
+.profile__links__container a {
+    font-weight: 600;
+}
+
+footer {
+    color: #4D2E27;
+}
